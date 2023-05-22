@@ -194,7 +194,7 @@ private String exibirNãoVendidos() {
 	private String getString(String string) {
 		Scanner r = new Scanner(System.in);
 		System.out.println("Entre com " + string);
-		return r.next();
+		return r.nextLine();
 
 	}
 
