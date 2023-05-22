@@ -45,10 +45,11 @@ public class InterfaceLeilao {
 	}
 
 	private void fazerLance() {
-		int numeroLote = getInt("Digite o número do lote: ");
-		double valorLance = getValor("Digite o valor do lance: ");
-		String resultado = leilao.lancePara(valorLance, numeroLote);
-		if (resultado == null) {
+		int numeroLote = getInt(" o número do lote: ");
+		double valorLance = getValor(" o valor do lance: ");
+		String licitante= getString("o nome do licitante");
+		String resultado = leilao.lancePara(licitante, valorLance, numeroLote);
+		if(resultado==null) {
 			System.out.println("Lance realizado com sucesso!");
 		} else {
 			System.out.println(resultado);

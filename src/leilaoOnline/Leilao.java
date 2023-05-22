@@ -125,13 +125,12 @@ public class Leilao {
 		}
 	}
 
-	public String lancePara(double valor, int numero) {
+	public String lancePara(String nomeLicitante,double valor, int numero) {
 		if (this.encerrado == false) {
 			Lote loteAtual = this.getLote(numero);
 			if (loteAtual != null) {
 				Lance lanceAtual = loteAtual.getMaiorLance();
 				if (lanceAtual == null || (lanceAtual.getValor() < valor)) {
-					String nomeLicitante = getString("o nome do licitante");
 					Pessoa licitante = new Pessoa(nomeLicitante);
 					loteAtual.setMaiorLance(new Lance(licitante, valor));
 					return null;
