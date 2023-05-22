@@ -125,12 +125,13 @@ public class Leilao {
 		}
 	}
 
-	public String lancePara(Scanner scanner, double valor, int numero) {
+	public String lancePara(double valor, int numero) {
 		if (this.encerrado == false) {
 			Lote loteAtual = this.getLote(numero);
 			if (loteAtual != null) {
 				Lance lanceAtual = loteAtual.getMaiorLance();
 				if (lanceAtual == null || (lanceAtual.getValor() < valor)) {
+					 Scanner scanner = new Scanner(System.in);				
 					System.out.print("Digite o nome do licitante: ");
 					String nomeLicitante = scanner.nextLine();
 					Pessoa licitante = new Pessoa(nomeLicitante);
