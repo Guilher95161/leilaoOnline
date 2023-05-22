@@ -131,9 +131,7 @@ public class Leilao {
 			if (loteAtual != null) {
 				Lance lanceAtual = loteAtual.getMaiorLance();
 				if (lanceAtual == null || (lanceAtual.getValor() < valor)) {
-					 Scanner scanner = new Scanner(System.in);				
-					System.out.print("Digite o nome do licitante: ");
-					String nomeLicitante = scanner.nextLine();
+					String nomeLicitante = getString("o nome do licitante");
 					Pessoa licitante = new Pessoa(nomeLicitante);
 					loteAtual.setMaiorLance(new Lance(licitante, valor));
 					return null;
