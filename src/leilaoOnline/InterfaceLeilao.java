@@ -48,7 +48,7 @@ public class InterfaceLeilao {
 		Scanner scanner = new Scanner(System.in);
 		int numeroLote = getInt("Digite o número do lote: ");
 		double valorLance = getValor("Digite o valor do lance: ");
-		String resultado = leilao.lancePara(scanner, valorLance, numeroLote);
+		String resultado = leilao.lancePara(valorLance, numeroLote);
 		if (resultado == null) {
 			System.out.println("Lance realizado com sucesso!");
 		} else {
